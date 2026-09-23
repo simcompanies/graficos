@@ -42,6 +42,9 @@
     constructor(onChange) {
       this.items = [];
       this.onChange = onChange || function () {};
+      // A namespace keeps each OrbisV laboratory independent while preserving
+      // the native object/session mechanics used by the editor.
+      this.storageNamespace = '';
       this.undoStack = [];
       this.redoStack = [];
       this.events = [];
@@ -49,6 +52,22 @@
       this.maxUndo = DEFAULT_MAX_UNDO;
       this.maxEvents = DEFAULT_MAX_EVENTS;
       this.lastSaveStatus = { ok: true, degraded: false, message: '' };
+    }
+
+    get storageKeys() {
+      const suffix = this.storageNamespace ? `:${this.storageNamespace}` : '';
+      return {
+        current: `${STORAGE_CURRENT}${suffix}`,
+        previous: `${STORAGE_PREVIOUS}${suffix}`,
+        recovery: `${STORAGE_RECOVERY}${suffix}`
+      };
+    }
+
+    setStorageNamespace(namespace = '') {
+      const value = String(namespace || '').trim().toLowerCase();
+      if (value && !/^[a-z0-9-]{1,80}$/.test(value)) throw new Error('Namespace de sessão inválido.');
+      this.storageNamespace = value;
+      return this.storageNamespace;
     }
 
     snapshot() { return clone(this.items); }
@@ -256,22 +275,23 @@
     }
     trySetStorage(key, value) { try { localStorage.setItem(key, value); return true; } catch { return false; } }
     save() {
-      const previous = (() => { try { return localStorage.getItem(STORAGE_CURRENT); } catch { return null; } })();
+      const keys = this.storageKeys;
+      const previous = (() => { try { return localStorage.getItem(keys.current); } catch { return null; } })();
       let payload;
       try { payload = JSON.stringify(this.serialize()); } catch (error) { this.lastSaveStatus = { ok:false, degraded:false, message:error?.message || 'Falha ao serializar a sessão.' }; return false; }
-      let ok = this.trySetStorage(STORAGE_CURRENT, payload); let degraded = false;
+      let ok = this.trySetStorage(keys.current, payload); let degraded = false;
       if (!ok) {
-        try { localStorage.removeItem(STORAGE_PREVIOUS); } catch {}
-        try { localStorage.removeItem(STORAGE_RECOVERY); } catch {}
+        try { localStorage.removeItem(keys.previous); } catch {}
+        try { localStorage.removeItem(keys.recovery); } catch {}
         try { payload = JSON.stringify(this.serialize({ compact:true })); } catch {}
-        ok = this.trySetStorage(STORAGE_CURRENT, payload); degraded = ok;
+        ok = this.trySetStorage(keys.current, payload); degraded = ok;
       }
       if (!ok) { this.lastSaveStatus = { ok:false, degraded:false, message:'O navegador não conseguiu salvar a sessão local. Exporte o projeto para evitar perda de dados.' }; return false; }
-      if (previous && previous !== payload) this.trySetStorage(STORAGE_PREVIOUS, previous);
+      if (previous && previous !== payload) this.trySetStorage(keys.previous, previous);
       try {
-        const recoveryRaw = localStorage.getItem(STORAGE_RECOVERY); let shouldWriteRecovery = !recoveryRaw;
+        const recoveryRaw = localStorage.getItem(keys.recovery); let shouldWriteRecovery = !recoveryRaw;
         if (recoveryRaw) { try { const r = JSON.parse(recoveryRaw); shouldWriteRecovery = Date.now() - new Date(r.savedAt || 0).getTime() > 5 * 60 * 1000; } catch { shouldWriteRecovery = true; } }
-        if (shouldWriteRecovery) this.trySetStorage(STORAGE_RECOVERY, payload);
+        if (shouldWriteRecovery) this.trySetStorage(keys.recovery, payload);
       } catch {}
       this.lastSaveStatus = { ok:true, degraded, message: degraded ? 'Sessão salva em modo compacto por limite de armazenamento do navegador.' : '' };
       return true;
@@ -292,14 +312,18 @@
     }
     parseStorageKey(key) { try { const text = localStorage.getItem(key); return text ? JSON.parse(text) : null; } catch { return null; } }
     load() {
-      const sources = [[STORAGE_CURRENT,'Sessão principal'],[STORAGE_PREVIOUS,'Cópia anterior'],[STORAGE_RECOVERY,'Recuperação automática']];
+      const keys = this.storageKeys;
+      const sources = [[keys.current,'Sessão principal'],[keys.previous,'Cópia anterior'],[keys.recovery,'Recuperação automática']];
       for (const [key,label] of sources) {
         const raw = this.parseStorageKey(key);
         if (raw && this.loadPayload(raw)) {
-          if (key !== STORAGE_CURRENT) { this.recordEvent('Sessão recuperada', label, 'recovery'); this.save(); }
+          if (key !== keys.current) { this.recordEvent('Sessão recuperada', label, 'recovery'); this.save(); }
           return true;
         }
       }
+      // Legacy migration only belongs to the unscoped editor session. A lab
+      // namespace must start from its own clean scene when no lab data exists.
+      if (this.storageNamespace) return false;
       try {
         const legacy = JSON.parse(localStorage.getItem(LEGACY_KEY) || 'null');
         if (legacy?.version === 2 && Array.isArray(legacy.items) && legacy.items.length <= this.maxItems) { this.restore(legacy.items, false); this.recordEvent('Sessão anterior migrada', 'Dados importados da Calculadora Gráfica', 'migration'); this.save(); return true; }
@@ -307,7 +331,8 @@
       return false;
     }
     recoveryCandidate() {
-      const candidates = [this.parseStorageKey(STORAGE_RECOVERY), this.parseStorageKey(STORAGE_PREVIOUS)];
+      const keys = this.storageKeys;
+      const candidates = [this.parseStorageKey(keys.recovery), this.parseStorageKey(keys.previous)];
       return candidates.find((raw) => raw && Array.isArray(raw.items) && raw.items.length <= this.maxItems) || null;
     }
     validateProject(project) {

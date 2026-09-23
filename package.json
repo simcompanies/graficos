@@ -1,6 +1,8 @@
 {
-  "name": "orbisv",
-  "version": "6.7.0",
-  "private": true,
-  "description": "OrbisV — ambiente gráfico matemático com renderização 2D/3D, persistência resiliente, validação profunda e PWA offline."
+  "name":"orbisv",
+  "version":"8.0.0",
+  "private":true,
+  "description":"OrbisV: 93 laboratórios de matemática, treino e Caderno.",
+  "scripts":{"test":"node tests/mathematics.cjs","test:browser":"node tests/browser.mjs"},
+  "devDependencies":{"playwright":"1.63.0"}
 }

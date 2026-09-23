@@ -32,7 +32,8 @@
         return;
       }
     }catch{}
-    location.href='../index.html';
+    const routes={home:'inicio',catalog:'simuladores',notebook:'caderno'};
+    location.href='../index.html#'+(String(action).startsWith('platform:')?(routes[action.split(':')[1]]||'inicio'):'inicio');
   }
 
   document.addEventListener('click',(e)=>{

@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Exemplo: fund-expressoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-fracoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-divisibilidade",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-proporcoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-unidades",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-conjuntos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-logica",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-algebra",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-equacoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-inequacoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-composicao",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-exponenciais",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-progressoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-trigonometria",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-triangulos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-medidas-planas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-solidos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-complexos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-combinatoria",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-estatistica",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: fund-juros",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-distancias",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-retas-medidas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-circunferencia",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-conicas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-conica-geral",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-reta-plano",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-planos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-coordenadas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-quadricas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: geo-poligonos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-produtos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-produto-misto",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-matrizes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-sistemas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-bases",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-gram-schmidt",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-transformacoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-autovalores",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: alg-minimos-quadrados",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-aproximacoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-epsilon-delta",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-derivacao",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-tangentes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-implicitas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-taxas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-analise",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-otimizacao",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-newton",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-lhopital",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-taylor",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-riemann",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc1-fundamental",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-primitivas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-substituicao",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-partes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-fracoes-parciais",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-substituicao-trig",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-quadratura",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-improprias",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-areas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-cascas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-arcos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-aplicacoes",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-parametricas-medidas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-edo",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-sequencias",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-criterios",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-series-potencias",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-superficies",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-limites-caminhos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-parciais",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-direcionais",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-duplas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-polares",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-triplas",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-jacobiano",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-lagrange",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-campos",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-integral-linha",
+    "ok": true
+  },
+  {
+    "name": "Exemplo: calc2-fluxo-superficie",
+    "ok": true
+  },
+  {
+    "name": "Frações exatas e sinais",
+    "ok": true
+  },
+  {
+    "name": "MDC e MMC de coprimos grandes",
+    "ok": true
+  },
+  {
+    "name": "Temperatura e unidades de volume",
+    "ok": true
+  },
+  {
+    "name": "Implicação: contraposição e falácia",
+    "ok": true
+  },
+  {
+    "name": "Inequação constante impossível e raiz dupla",
+    "ok": true
+  },
+  {
+    "name": "Equação com raiz múltipla não na malha",
+    "ok": true
+  },
+  {
+    "name": "Triângulo 3–4–5",
+    "ok": true
+  },
+  {
+    "name": "Operação complexa divisão",
+    "ok": true
+  },
+  {
+    "name": "Probabilidades binomiais somam um",
+    "ok": true
+  },
+  {
+    "name": "Estatística amostral",
+    "ok": true
+  },
+  {
+    "name": "Interseção de planos satisfaz ambas as equações",
+    "ok": true
+  },
+  {
+    "name": "Circunferência tangente tem um ponto",
+    "ok": true
+  },
+  {
+    "name": "Cônicas reais e imaginárias",
+    "ok": true
+  },
+  {
+    "name": "Esféricas no equador",
+    "ok": true
+  },
+  {
+    "name": "Inversa de matriz verificada por produto",
+    "ok": true
+  },
+  {
+    "name": "Sistema incompatível e indeterminado",
+    "ok": true
+  },
+  {
+    "name": "Núcleo satisfaz Av=0",
+    "ok": true
+  },
+  {
+    "name": "Gram–Schmidt ortonormal",
+    "ok": true
+  },
+  {
+    "name": "Produto vetorial perpendicular aos fatores",
+    "ok": true
+  },
+  {
+    "name": "Autovalores complexos da rotação",
+    "ok": true
+  },
+  {
+    "name": "Regressão recupera reta exata",
+    "ok": true
+  },
+  {
+    "name": "Limites: lados opostos de 1/x não são somados",
+    "ok": true
+  },
+  {
+    "name": "Derivada de log base 10 e ln preservadas",
+    "ok": true
+  },
+  {
+    "name": "Regra da cadeia",
+    "ok": true
+  },
+  {
+    "name": "Derivação de ordem superior",
+    "ok": true
+  },
+  {
+    "name": "Derivação implícita e taxas relacionadas",
+    "ok": true
+  },
+  {
+    "name": "Taylor de x³ é exato no grau três",
+    "ok": true
+  },
+  {
+    "name": "Newton converge para sqrt(2)",
+    "ok": true
+  },
+  {
+    "name": "Primitiva: derivada devolve integrando",
+    "ok": true
+  },
+  {
+    "name": "Substituição conserva integral",
+    "ok": true
+  },
+  {
+    "name": "Partes: integral x exp(x) de 0 a 1",
+    "ok": true
+  },
+  {
+    "name": "Quadratura de seno",
+    "ok": true
+  },
+  {
+    "name": "Impróprias: fronteiras analíticas p=1",
+    "ok": true
+  },
+  {
+    "name": "Área entre x e x²",
+    "ok": true
+  },
+  {
+    "name": "Cascas: integral de 2πx(1−x²)",
+    "ok": true
+  },
+  {
+    "name": "Arco retilíneo e superfície cônica",
+    "ok": true
+  },
+  {
+    "name": "Curva circular: comprimento e área",
+    "ok": true
+  },
+  {
+    "name": "RK4 y′=y com y(0)=1",
+    "ok": true
+  },
+  {
+    "name": "Série geométrica e alternada",
+    "ok": true
+  },
+  {
+    "name": "Logaritmo por série no extremo x=1",
+    "ok": true
+  },
+  {
+    "name": "Hessiana classifica ponto de sela",
+    "ok": true
+  },
+  {
+    "name": "Derivada direcional normaliza vetor",
+    "ok": true
+  },
+  {
+    "name": "Integral dupla triangular",
+    "ok": true
+  },
+  {
+    "name": "Integral polar inclui jacobiano",
+    "ok": true
+  },
+  {
+    "name": "Integral tripla no tetraedro",
+    "ok": true
+  },
+  {
+    "name": "Mudança de variáveis: quarto de disco raio dois",
+    "ok": true
+  },
+  {
+    "name": "Lagrange obtém candidato com resíduo pequeno",
+    "ok": true
+  },
+  {
+    "name": "Divergência e rotacional conhecidos",
+    "ok": true
+  },
+  {
+    "name": "Integral de linha em círculo orientado",
+    "ok": true
+  },
+  {
+    "name": "Fluxo vertical através de gráfico sobre quadrado",
+    "ok": true
+  },
+  {
+    "name": "Rejeita divisão por zero",
+    "ok": true
+  },
+  {
+    "name": "Rejeita variável não autorizada",
+    "ok": true
+  },
+  {
+    "name": "Rejeita unidades incompatíveis",
+    "ok": true
+  },
+  {
+    "name": "Rejeita triângulo impossível",
+    "ok": true
+  },
+  {
+    "name": "Rejeita vetor nulo direcional",
+    "ok": true
+  },
+  {
+    "name": "Rejeita matriz singular",
+    "ok": true
+  },
+  {
+    "name": "Rejeita normal nula",
+    "ok": true
+  },
+  {
+    "name": "Rejeita denominador implícito nulo",
+    "ok": true
+  },
+  {
+    "name": "Rejeita Simpson ímpar",
+    "ok": true
+  },
+  {
+    "name": "Rejeita polo interior",
+    "ok": true
+  },
+  {
+    "name": "Rejeita densidade negativa",
+    "ok": true
+  },
+  {
+    "name": "Rejeita limites duplos invertidos",
+    "ok": true
+  },
+  {
+    "name": "Rejeita entrada como JavaScript",
+    "ok": true
+  }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "name": "Catálogo: cinco áreas e 93 laboratórios",
+    "ok": true
+  },
+  {
+    "name": "Busca sem acento e filtro por grupo",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-expressoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-fracoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-divisibilidade",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-proporcoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-unidades",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-conjuntos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-logica",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-algebra",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-equacoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-inequacoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-composicao",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-exponenciais",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-progressoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-trigonometria",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-triangulos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-medidas-planas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-solidos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-complexos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-combinatoria",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-estatistica",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: fund-juros",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-distancias",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-retas-medidas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-circunferencia",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-conicas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-conica-geral",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-reta-plano",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-planos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-coordenadas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-quadricas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: geo-poligonos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-produtos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-produto-misto",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-matrizes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-sistemas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-bases",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-gram-schmidt",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-transformacoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-autovalores",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: alg-minimos-quadrados",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-aproximacoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-epsilon-delta",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-derivacao",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-tangentes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-implicitas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-taxas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-analise",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-otimizacao",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-newton",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-lhopital",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-taylor",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-riemann",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc1-fundamental",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-primitivas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-substituicao",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-partes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-fracoes-parciais",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-substituicao-trig",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-quadratura",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-improprias",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-areas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-cascas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-arcos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-aplicacoes",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-parametricas-medidas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-edo",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-sequencias",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-criterios",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-series-potencias",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-superficies",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-limites-caminhos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-parciais",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-direcionais",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-duplas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-polares",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-triplas",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-jacobiano",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-lagrange",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-campos",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-integral-linha",
+    "ok": true
+  },
+  {
+    "name": "Worker e resultado: calc2-fluxo-superficie",
+    "ok": true
+  },
+  {
+    "name": "Treino oculta resultados, aceita fração e registra resposta",
+    "ok": true
+  },
+  {
+    "name": "Anotação e experimento sobrevivem ao recarregamento",
+    "ok": true
+  },
+  {
+    "name": "Edição invalida resultado e mantém entradas isoladas",
+    "ok": true
+  },
+  {
+    "name": "Entrada inválida gera mensagem e libera formulário",
+    "ok": true
+  },
+  {
+    "name": "Exportações JSON, CSV e SVG do laboratório",
+    "ok": true
+  },
+  {
+    "name": "Caderno: importação inválida preserva notas",
+    "ok": true
+  },
+  {
+    "name": "Caderno: exportação e reimportação sem duplicatas",
+    "ok": true
+  },
+  {
+    "name": "Editor nativo: criação, edição, desfazer e registro",
+    "ok": true
+  },
+  {
+    "name": "Sessão gráfica conservada após cálculo específico",
+    "ok": true
+  },
+  {
+    "name": "12 práticas nativas abrem com modos válidos",
+    "ok": true
+  },
+  {
+    "name": "Gráfico 3D gira e exporta desenho vetorial",
+    "ok": true
+  },
+  {
+    "name": "Mobile claro: sem estouro horizontal, cálculo e Caderno",
+    "ok": true
+  },
+  {
+    "name": "Tema escuro e filtros de visão de cores",
+    "ok": true
+  },
+  {
+    "name": "Offline: shell, módulos e cálculo sem conexão",
+    "ok": true
+  },
+  {
+    "name": "Abertura por arquivo local com Worker independente",
+    "ok": true
+  },
+  {
+    "name": "Sem erros JavaScript não tratados",
+    "ok": true
+  }
+]

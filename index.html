@@ -13,8 +13,10 @@
   <link rel="icon" href="assets/orbisv-v-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/orbisv-v-64.png" sizes="64x64" type="image/png">
   <link rel="apple-touch-icon" href="assets/orbisv-v-180.png" sizes="180x180">
-  <link rel="manifest" href="manifest.webmanifest?v=6.7.0">
-  <link rel="stylesheet" href="css/style.css?v=6.7.0">
+  <link rel="manifest" href="manifest.webmanifest?v=8.0.0">
+  <link rel="stylesheet" href="css/style.css?v=8.0.0">
+  <link rel="stylesheet" href="css/platform.css?v=8.0.0">
+  <link rel="stylesheet" href="css/workbench.css?v=8.0.0">
 </head>
 <body>
   <div class="orbisv-intro" id="orbisvIntro" role="dialog" aria-modal="true" aria-label="Apresentação OrbisV">
@@ -46,7 +48,39 @@
       </filter>
     </defs>
   </svg>
-  <a class="skip-link" href="#graphCanvas">Ir para o gráfico</a>
+  <a class="skip-link" id="platformSkip" href="#platformContent">Ir para a área de trabalho</a>
+
+  <!-- Hub didático: navegação por conteúdo antes de entrar no editor nativo. -->
+  <section class="platform-hub" id="platformHub" aria-label="Plataforma de matemática">
+    <header class="platform-header">
+      <a class="platform-brand" href="#inicio" data-platform-page="home" aria-label="OrbisV — início">
+        <img src="assets/orbisv-v-64.png" alt="" aria-hidden="true">
+        <span><strong>OrbisV</strong><small>Visualize · Explore · Descubra</small></span>
+      </a>
+      <nav class="platform-nav" aria-label="Navegação principal">
+        <button type="button" data-platform-page="home" aria-current="page">Início</button>
+        <button type="button" data-platform-page="catalog">Simuladores</button>
+        <button type="button" data-platform-page="notebook">Caderno</button>
+        <button type="button" data-platform-a11y>Acessibilidade</button>
+      </nav>
+    </header>
+    <div class="platform-layout">
+      <aside class="platform-sidebar" aria-label="Conteúdos matemáticos">
+        <div class="platform-sidebar-title"><span>ÁREAS DA MATEMÁTICA</span><strong>Conteúdos</strong></div>
+        <div id="platformMenu" class="platform-menu"></div>
+        <div class="platform-sidebar-foot">Matemática em qualquer dimensão.</div>
+      </aside>
+      <main class="platform-content" id="platformContent" tabindex="-1"></main>
+    </div>
+    <footer class="platform-footer"><span>OrbisV</span><span>Laboratório visual para aprender, testar e registrar.</span></footer>
+  </section>
+
+  <section class="platform-lab-bar" id="platformLabBar" hidden aria-label="Navegação do laboratório">
+    <button type="button" class="platform-back" data-platform-back>Voltar ao catálogo</button>
+    <div class="platform-lab-context"><span class="platform-lab-area" id="platformLabArea">LABORATÓRIO</span><strong id="platformLabTitle">Laboratório OrbisV</strong></div>
+    <div class="platform-lab-actions"><button type="button" data-platform-record>Registrar cena</button><button type="button" data-platform-page="notebook">Abrir Caderno</button><button type="button" data-platform-home>Início</button></div>
+  </section>
+
   <main class="app-shell" id="appShell">
     <header class="topbar">
       <div class="brand-block" aria-label="OrbisV — Visualize · Explore · Descubra — Matemática em qualquer dimensão">
@@ -202,7 +236,7 @@
       <header class="manual-dock-head">
         <div class="manual-dock-title">
           <img class="official-v-mark" src="assets/orbisv-v-symbol.png" data-dark-src="assets/orbisv-v-symbol.png" data-light-src="assets/orbisv-v-symbol-light.png" alt="" aria-hidden="true">
-          <div><span class="micro-label">AJUDA INTERATIVA</span><h2 id="manualDockTitle">Manual didático</h2></div>
+          <div><span class="micro-label">AJUDA INTERATIVA</span><h2 id="manualDockTitle">Guia de uso</h2></div>
         </div>
         <div class="manual-dock-actions">
           <button class="icon-btn small" id="manualDockExpandBtn" type="button" aria-pressed="false" title="Ampliar manual" aria-label="Ampliar manual">
@@ -214,7 +248,7 @@
         </div>
       </header>
       <div class="manual-dock-body">
-        <iframe id="manualFrame" title="Manual didático do OrbisV" loading="lazy" data-src="./manual/index.html?embed=1"></iframe>
+        <iframe id="manualFrame" title="Guia de uso do OrbisV" loading="lazy" data-src="./manual/index.html?embed=1"></iframe>
       </div>
     </aside>
 
@@ -289,7 +323,7 @@
             <button class="project-menu-card" id="projectA11yBtn" type="button"><strong>Acessibilidade</strong><span>Tema, contraste, visão de cores e leitura</span></button>
             <button class="project-menu-card" id="startTourBtn" type="button"><strong>Tour do OrbisV</strong><span>Rever as principais funcionalidades</span></button>
             <button class="project-menu-card" id="projectVisualBtn" type="button"><strong>Visualização</strong><span>Grade, eixos, coordenadas e snap</span></button>
-            <button class="project-menu-card" id="projectManualBtn" type="button"><strong>Manual didático</strong><span>Abrir o guia em uma janela dentro do OrbisV</span></button>
+            <button class="project-menu-card" id="projectManualBtn" type="button"><strong>Guia de uso</strong><span>Abrir o guia em uma janela dentro do OrbisV</span></button>
           </div>
           <div class="project-feature-strip" aria-label="Recursos principais">
             <span>Notação matemática visual</span><span>Objetos e histórico</span><span>47 modelos</span><span>PWA e acessibilidade</span>
@@ -419,11 +453,23 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div id="liveRegion" class="sr-only" aria-live="polite"></div>
 
-  <script src="js/mathEngine.js?v=6.7.0"></script>
-  <script src="js/graphObjects.js?v=6.7.0"></script>
-  <script src="js/graphEngine.js?v=6.7.0"></script>
-  <script src="js/models.js?v=6.7.0"></script>
-  <script src="js/ui.js?v=6.7.0"></script>
-  <script src="js/main.js?v=6.7.0"></script>
+  <script src="js/mathEngine.js?v=8.0.0"></script>
+  <script src="js/graphObjects.js?v=8.0.0"></script>
+  <script src="js/graphEngine.js?v=8.0.0"></script>
+  <script src="js/models.js?v=8.0.0"></script>
+  <script src="js/ui.js?v=8.0.0"></script>
+  <script src="js/main.js?v=8.0.0"></script>
+  <script src="js/catalog.js?v=8.0.0"></script>
+  <script src="js/labs/kernel.js?v=8.0.0"></script>
+  <script src="js/labs/fundamentals.js?v=8.0.0"></script>
+  <script src="js/labs/geometry.js?v=8.0.0"></script>
+  <script src="js/labs/vectors.js?v=8.0.0"></script>
+  <script src="js/labs/calculus1.js?v=8.0.0"></script>
+  <script src="js/labs/calculus2.js?v=8.0.0"></script>
+  <script src="js/labs/multivariable.js?v=8.0.0"></script>
+  <script src="js/labs/extend-catalog.js?v=8.0.0"></script>
+  <script src="js/labs/worker-source.js?v=8.0.0"></script>
+  <script src="js/labs/workbench.js?v=8.0.0"></script>
+  <script src="js/platform.js?v=8.0.0"></script>
 </body>
 </html>

@@ -1,9 +1,26 @@
 'use strict';
 
 const CACHE_PREFIX = 'orbisv-shell-';
-const CACHE_NAME = `${CACHE_PREFIX}v6.7-20260914`;
-const BUILD = '6.7.0';
+const CACHE_NAME = `${CACHE_PREFIX}v8.0-20260923`;
+const BUILD = '8.0.0';
+const MODULE_SHELL = [
+  `./css/platform.css?v=${BUILD}`,
+  `./css/workbench.css?v=${BUILD}`,
+  `./js/catalog.js?v=${BUILD}`,
+  `./js/platform.js?v=${BUILD}`,
+  `./js/labs/kernel.js?v=${BUILD}`,
+  `./js/labs/fundamentals.js?v=${BUILD}`,
+  `./js/labs/geometry.js?v=${BUILD}`,
+  `./js/labs/vectors.js?v=${BUILD}`,
+  `./js/labs/calculus1.js?v=${BUILD}`,
+  `./js/labs/calculus2.js?v=${BUILD}`,
+  `./js/labs/multivariable.js?v=${BUILD}`,
+  `./js/labs/extend-catalog.js?v=${BUILD}`,
+  `./js/labs/worker-source.js?v=${BUILD}`,
+  `./js/labs/workbench.js?v=${BUILD}`,
+];
 const APP_SHELL = [
+  ...MODULE_SHELL,
   './',
   './index.html',
   `./manifest.webmanifest?v=${BUILD}`,
@@ -40,6 +57,7 @@ const APP_SHELL = [
 ];
 
 const REQUIRED_SHELL = new Set([
+  ...MODULE_SHELL,
   './', './index.html', `./manifest.webmanifest?v=${BUILD}`, `./css/style.css?v=${BUILD}`,
   `./js/mathEngine.js?v=${BUILD}`, `./js/models.js?v=${BUILD}`, `./js/graphObjects.js?v=${BUILD}`,
   `./js/graphEngine.js?v=${BUILD}`, `./js/ui.js?v=${BUILD}`, `./js/main.js?v=${BUILD}`
